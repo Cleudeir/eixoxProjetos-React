@@ -1,0 +1,88 @@
+.Preco{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.Preco .card--preco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.Preco .card--conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.Preco .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;    
+    min-height: 310px;
+    -webkit-box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.65); 
+    box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.65);    
+    border-radius: 3px;
+    height: 375px;
+    width: 320px;
+    padding: 10px;
+    margin: 10px;
+}
+.Preco .card ol{
+    width: 100%; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0px;
+    margin: auto;
+}
+
+.Preco .card ol li{
+    width: 100%; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1px 5px;
+}
+.Preco .card ol img{
+    width: 20px; 
+    padding: 0px 5px;
+}
+
+.Preco h1{
+    font-size: 30px;
+    padding: 5px;
+}
+
+.Preco h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.Preco h3{
+    font-size: 16px;
+    font-weight: 100;
+    padding: 5px;
+}
+.Preco h4{
+    font-size: 16px;
+    font-weight: 100;
+}
+.Preco h5{
+    font-size: 12px;
+    font-weight: 100;
+    padding: 10px;
+}

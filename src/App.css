@@ -1,38 +1,628 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+	padding: 0;
+	margin: 0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+	--cor1: rgba(3, 116, 26, 0.727);
+	--cor2: #464646
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	width: 100%;
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #f5f5f5
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+	color: #000;
+	color: initial;
+	text-decoration: none
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+	width: 5px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+	background: #f1f1f1
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555
+}
+
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none
+}
+
+input[type=number] {
+	-webkit-appearance: textfield;
+	appearance: textfield
+}
+
+.Capa {
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+
+video {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	z-index: -1
+}
+
+.Capa--info {
+	position: absolute;
+	top: 70vh;
+	z-index: 5;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	-webkit-animation: MoveUpDown .5s linear 1s infinite alternate;
+	animation: MoveUpDown .5s linear 1s infinite alternate
+}
+
+.Capa--info h3 {
+	width: 100%;
+	z-index: 5;
+	color: #fff;
+	font-weight: 700;
+	font-size: 30px;
+	text-shadow: 0 0 12px rgba(0, 0, 0, .63)
+}
+
+.Capa--info .Capa--seta--down {
+	font-size: 80px;
+	-webkit-filter: invert(1);
+	filter: invert(1);
+	margin-top: -10px
+}
+
+@-webkit-keyframes MoveUpDown {
+	0% {
+		-webkit-transform: scale(.9);
+		transform: scale(.9)
+	}
+
+	to {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@keyframes MoveUpDown {
+	0% {
+		-webkit-transform: scale(.9);
+		transform: scale(.9)
+	}
+
+	to {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+.ComoFunciona {
+	width: 100%;
+	min-height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin: 10px
+}
+
+.ComoFunciona h1 {
+	margin-top: 50px
+}
+
+.ComoFunciona .Card--container {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap
+}
+
+.ComoFunciona .Card {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 5px;
+	cursor: pointer;
+	width: 340px;
+	-webkit-transform: scale(.95);
+	transform: scale(.95);
+	transition: .5s
+}
+
+.ComoFunciona .Card:hover {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	border-radius: 10px;
+	transition: .5s
+}
+
+.ComoFunciona h3 {
+	font-size: 14pt
+}
+
+.ComoFunciona h4 {
+	font-size: smaller;
+	color: var(--cor1)
+}
+
+.ComoFunciona img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 2px;
+	-webkit-transform: scale(.9);
+	transform: scale(.9);
+	transition: .5s;
+	border-radius: 2px solid
+}
+
+.Card--text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 20px
+}
+
+.Card--text h3 {
+	font-weight: 200;
+	text-align: center;
+	width: 100%;
+	color: var(--cor1)
+}
+
+.Header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease 0s;
+}
+
+.Header--logo {
+	height: 40px;
+	margin: 5px;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center
+}
+
+.Header--logo img {
+	width: 40px;
+	height: 100%
+}
+
+.Header--logo h4 {
+	color: #fff;
+	cursor: pointer;
+	margin-left: 5px;
+	width: 50px
+}
+
+.Header--menu {
+	height: 50px;
+	margin: 0 5px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center
+}
+
+.Header--menu .LINK {
+	background-color: rgba(20, 20, 20, 0);
+	margin: 0 5px;
+	padding: 0 5px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 18px
+}
+
+.Header--contact {
+	height: 25px;
+	margin: 0 5px;
+	cursor: pointer
+}
+
+.Header--contact a {
+	margin: 0 5px
+}
+
+.Header--contact img {
+	width: auto;
+	height: 100%
+}
+
+@media (max-width:500px) {
+	.Header--logo h4 {
+		opacity: 0;
+		margin-right: -40px
+	}
+
+	.Header--menu .LINK {
+		font-size: 16px
+	}
+}
+
+.Footer {
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: hsla(0, 0%, 50.2%, .193)
+}
+
+.App,
+.Preco {
+	flex-direction: row;
+	flex-wrap: wrap
+}
+
+.App,
+.Preco,
+.Preco .card--preco {
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.Preco .card--preco {
+	flex-direction: column;
+	border-radius: 10px;
+	margin-top: 30px
+}
+
+.Preco .card--conteiner {
+	flex-direction: row;
+	flex-wrap: wrap
+}
+
+.Preco .card,
+.Preco .card--conteiner {
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.Preco .card {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	min-height: 310px;
+	box-shadow: 0 0 20px -1px rgba(0, 0, 0, .65);
+	border-radius: 3px;
+	height: 375px;
+	width: 320px;
+	padding: 10px;
+	margin: 10px
+}
+
+.Preco .card ol {
+	flex-direction: column;
+	padding: 0;
+	margin: auto
+}
+
+.Preco .card ol,
+.Preco .card ol li {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: nowrap
+}
+
+.Preco .card ol li {
+	flex-direction: row;
+	margin: 1px 5px
+}
+
+.Preco .card ol img {
+	width: 20px;
+	padding: 0 5px
+}
+
+.Preco h1 {
+	font-size: 30px;
+	padding: 5px
+}
+
+.Preco h2 {
+	font-size: 22px;
+	font-weight: 700;
+	margin: 10px 0
+}
+
+.Preco h3 {
+	padding: 5px
+}
+
+.Preco h3,
+.Preco h4 {
+	font-size: 16px;
+	font-weight: 100
+}
+
+.Preco h5 {
+	font-size: 12px;
+	font-weight: 100;
+	padding: 10px
+}
+
+.DadosUser {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-direction: column;
+	flex-wrap: wrap;
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .4);
+	border-radius: 3px;
+	width: 320px;
+	padding: 10px;
+	margin: 10px auto
+}
+
+.DadosUser h1 {
+	font-size: 25px;
+	padding-bottom: 15px;
+	text-align: center
+}
+
+.Dados .title {
+	margin: 10px;
+	justify-content: center;
+	flex-direction: column
+}
+
+.Dados .title,
+.title--item {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap
+}
+
+.title--item {
+	padding: 3px 0;
+	justify-content: space-between;
+	flex-direction: row;
+	color: var(--cor1)
+}
+
+.title--item h4 {
+	padding: 0 15px
+}
+
+.Dados {
+	padding: 5px
+}
+
+.Dados,
+.Dados .card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap
+}
+
+.Dados .item {
+	padding: 4px 5px;
+	justify-content: space-between;
+	width: 100%
+}
+
+.Dados .item,
+.Dados .item--input {
+	display: flex;
+	align-items: center;
+	flex-direction: row
+}
+
+.Dados .item--input {
+	justify-content: center;
+	flex-wrap: nowrap
+}
+
+.Dados input,
+.Dados select {
+	padding: 2px;
+	margin: 0;
+	text-align: center;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+	border: 0;
+	outline: 0;
+	width: 80px;
+	background-color: #fff
+}
+
+.Dados select {
+	cursor: pointer
+}
+
+.DadosUser button {
+	padding: 4px;
+	margin: 10px 0 0;
+	text-align: center;
+	cursor: pointer;
+	outline: 0;
+	border: 0;
+	width: 100%;
+	font-size: 18pt;
+	background-color: var(--cor1);
+	color: #fff;
+	transition: .5s
+}
+
+.DadosUser button:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+	transition: .5s;
+	background-color: rgba(6, 91, 250, .727)
+}
+
+.Protifolio {
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: -20px;
+	margin-top: 50px
+}
+
+.Protifolio,
+.Protifolio .card--conteriner {
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.Protifolio .card--conteriner {
+	width: 50%;
+	flex-direction: column;
+	flex-wrap: nowrap
+}
+
+.Protifolio .card360,
+.Protifolio .cardImg,
+.Protifolio .cardVideo {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 49vw;
+	border-radius: 2px;
+	padding: 1px
+}
+
+.Protifolio .cardVideo {
+	width: 70vw
+}
+
+.Protifolio iframe,
+.Protifolio img {
+	width: calc(100% - 4px);
+	object-fit: cover;
+	object-position: center;
+	border-radius: 5px;
+	border: 2px solid var(--cor2);
+	padding-top: 28px;
+	height: 40vw
+}
+
+.Protifolio .card--seta--left,
+.Protifolio .card--seta--right {
+	margin-top: -100px;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: 30px;
+	height: 30px;
+	background-color: hsla(0, 0%, 100%, .624);
+	-webkit-filter: invert(1);
+	filter: invert(1);
+	border-radius: 100%;
+	z-index: 99;
+	padding: 5px;
+	border: 2px solid #000;
+	opacity: 1;
+	transition: .2s;
+	-webkit-transform: scale(.9);
+	transform: scale(.9);
+	cursor: pointer
+}
+
+.Protifolio .card--seta--left {
+	left: 15.5%
+}
+
+.Protifolio .card--seta--right {
+	right: 15.5%
+}
+
+.Protifolio .card--seta--left:hover,
+.Protifolio .card--seta--right:hover {
+	transition: .2s;
+	-webkit-transform: scale(1);
+	transform: scale(1)
+}
+
+.Protifolio h2 {
+	text-transform: uppercase;
+	background-color: var(--cor2);
+	width: 100%;
+	margin: 2px 2px -32px;
+	z-index: 999;
+	text-align: center;
+	border-radius: 1px;
+	color: #fff
+}
+
+@media (max-width:700px) {
+	.Protifolio iframe {
+		height: 55vw
+	}
+
+	.Protifolio img {
+		height: 80vw
+	}
+
+	.Protifolio .iframe360 {
+		height: 90vw
+	}
+
+	.Protifolio .card--conteriner {
+		width: 100%
+	}
+
+	.Protifolio .card360,
+	.Protifolio .cardImg,
+	.Protifolio .cardVideo {
+		width: calc(100vw - 10px)
+	}
 }

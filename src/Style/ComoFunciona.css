@@ -1,0 +1,79 @@
+.ComoFunciona{
+    width: 100%; 
+    min-height: 30vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+.ComoFunciona h1{ 
+    margin-top: 50px;
+}
+.ComoFunciona .Card--container{   
+    margin-top: 30px; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+.ComoFunciona .Card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+    padding: 5px;
+    cursor: pointer;
+    width: 340px;
+    transform: scale(.95);
+    transition: .5s;
+}
+.ComoFunciona .Card:hover{
+    transform: scale(1);
+    border-radius: 10px;
+    transition: .5s;
+}
+.ComoFunciona h3{
+    font-size:14pt;
+}
+.ComoFunciona h4{
+    font-size:smaller;
+    color:var(--cor1);
+}
+.ComoFunciona img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 2px;
+    transform: scale(.9);
+    transition: .5s;
+    border-radius: 2px solid;
+}
+.Card--text{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap; 
+    padding: 20px;
+  
+}
+.Card--text h3{
+    font-weight: 200;
+    text-align: center;
+    width:100%;
+    color:var(--cor1);
+}
+@media (min-width: 0px){ 
+    
+}
+@media (min-width: 480px){ 
+    
+}
+@media (min-width: 600px){ 
+    
+}
