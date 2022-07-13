@@ -4,7 +4,7 @@ export default function CardPrecos({area, tipo, descricao, vm2}) {
 
   let fatorArea = -0.0004*area+1.0004;
   if (fatorArea<0.6) {
-    fatorArea=0.6;
+    fatorArea=0.5;
   }
   if (tipo.substr(0, 6) !=='Design') {
     vm2 = (vm2 * fatorArea).toFixed(2);
