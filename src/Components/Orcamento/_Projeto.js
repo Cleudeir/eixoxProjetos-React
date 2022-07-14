@@ -13,8 +13,8 @@ export class projeto {
     this.itensInclude = (
       <>{value.map((item, i)=>{
         return (
-          <li key={icon.iconName}>
-            <img src={icon.base+icon.iconName+icon.extension} alt={i}/> {item}
+          <li key={icon.iconName+i}>
+            <img src={icon.base+icon.iconName+icon.extension} alt={i+'c'}/> {item}
           </li>);
       })}</>
     );
@@ -24,16 +24,37 @@ export class projeto {
     this.itensExcluded = (
       <>{value.map((item, i)=>{
         return (
-          <li key={icon.iconName}>
-            <img src={icon.base+icon.iconName+icon.extension} alt={i}/> {item}
+          <li key={icon.iconName+i}>
+            <img src={icon.base+icon.iconName+icon.extension} alt={i+'b'}/> {item}
           </li>);
       })}</>
     );
   }
-  valoresInsert(valorM2, precentualAcrescimoPrazo) {
-    const vista = this.areaConsruir * valorM2;
-    const prazoTotal = this.areaConsruir * valorM2 * (1+precentualAcrescimoPrazo/100);
-    let parcela = Math.floor(prazoTotal / 400);
+  valoresInsert(value, acrescimo) {
+    const area = this.areaConsruir;
+    let factor = -0.0005 * this.areaConsruir + 1;
+    if (factor<0.6) {
+      factor = 0.6;
+    }
+    console.log(factor);
+    const vista = area * value * factor;
+    const prazoTotal = vista * (1 + acrescimo / 100);
+    let parcela = Math.floor(prazoTotal / 250);
+    if (parcela<3) {
+      parcela = 2;
+    } else if (parcela>12) {
+      parcela = 12;
+    }
+    const prazo = +parseFloat(prazoTotal/parcela).toFixed(2);
+    this.valores = {
+      vista,
+      prazo,
+      parcela,
+    };
+  }
+  valoresFixInsert(vista, acrescimo) {
+    const prazoTotal = vista * (1 + acrescimo / 100);
+    let parcela = Math.floor(prazoTotal / 250);
     if (parcela<3) {
       parcela = 2;
     } else if (parcela>12) {
@@ -50,8 +71,8 @@ export class projeto {
     this.observacao = (
       <>{value.map((item, i)=>{
         return (
-          <li key={icon.iconName}>
-            <img src={icon.base+icon.iconName+icon.extension} alt={i}/> {item}
+          <li key={i+'a'} >
+            {item}
           </li>);
       })}</>
     );

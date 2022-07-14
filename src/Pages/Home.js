@@ -5,7 +5,7 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import '../Style/App.css';
 import {useEffect, useState} from 'react';
-import Orcameto from '../Components/Orcameto';
+import Orcameto from '../Components/Orcamento';
 import DadosUser from '../Components/DadosUser';
 import Portifolio from '../Components/Portifolio';
 
@@ -28,7 +28,7 @@ function Home() {
     }, 100);
   };
   useEffect(()=>{
-    setAreas({areaTotal: 100, areaDeTerreno: 240});
+    setAreas({areaConsruir: 60, areaTerreno: 240});
   }, []);
 
   return (
@@ -39,7 +39,7 @@ function Home() {
         <Portifolio/>
         <DadosUser PassarAreas={PassarAreas}/>
         <ComoFunciona e comoDeseja={comoDeseja}/>
-        {areas && <Orcameto areas={areas}/>}
+        {areas && <Orcameto areaConsruir={areas.areaConsruir} areaTerreno={areas.areaTerreno}/>}
       </>
       <Footer/>
     </div>
