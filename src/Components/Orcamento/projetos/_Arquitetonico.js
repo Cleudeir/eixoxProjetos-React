@@ -1,6 +1,6 @@
-import {projeto} from './_Projeto';
+import {projeto} from '../class/_Projeto';
 
-export default function Arquitetonico({areaConsruir, areaTerreno}) {
+export default function Arquitetonico({areaConsruir}) {
   const itensInclude = [
     'Aprovação na Prefeitura',
     'Planta Humanizada',
@@ -16,7 +16,7 @@ export default function Arquitetonico({areaConsruir, areaTerreno}) {
     '',
   ];
 
-  const arquitetonico = new projeto('Arquitetonico', areaConsruir, areaTerreno);
+  const arquitetonico = new projeto('Arquitetonico', areaConsruir);
   arquitetonico.itensIncludeInsert(itensInclude);
   arquitetonico.itensExcludedInsert(itensExcluded);
   arquitetonico.valoresInsert(8.85, 10);

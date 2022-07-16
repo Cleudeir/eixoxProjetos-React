@@ -2,28 +2,41 @@ import React from 'react';
 import '../../Style/Orcamento.css';
 import {useState, useEffect} from 'react';
 import Card from './Card';
-import Arquitetonico from './_Arquitetonico';
-import Design from './_Design';
-import Estrutural from './_Estrutural';
-const Orcameto = ({areaConsruir, areaTerreno}) =>{
-  const [useArquetetonico, setArquetetonico] = useState(false);
-  const [useDesign, setDesign] = useState(false);
-  const [useEstrutural, setEstrutural] = useState(false);
+import Arquitetonico from './projetos/_Arquitetonico';
+import Design from './projetos/_Design';
+import Estrutural from './projetos/_Estrutural';
+import Hidrossanitario from './projetos/_InstalacaoEletrica';
+import InstalacaoEletrica from './projetos/_InstalacaoEletrica';
+const Orcameto = () =>{
+  const [areaConsruir, setAreaConsruir] = useState(60);
 
-  useEffect(() => {
-    setArquetetonico(Arquitetonico({areaConsruir, areaTerreno}));
-    setDesign(Design({areaConsruir, areaTerreno}));
-    setEstrutural(Estrutural({areaConsruir, areaTerreno}));
-  }, []);
+  function miniCard(value){
+
+    return(
+      <div className='miniCard' onClick={()=>{
+        setAreaConsruir(value)
+       }}>
+        <h4>{value}m²</h4>
+    </div>
+    )
+  }
 
   return (
-    useArquetetonico &&
     (
+    <>
+      <div className='Preco'>
+         {miniCard(30)}
+         {miniCard(60)} 
+         {miniCard(90)}  
+      </div>
       <section className='Preco'>
-        {Card(useArquetetonico)}
-        {Card(useDesign)}
-        {Card(useEstrutural)}
+          {Card(Arquitetonico({areaConsruir}))}
+          {Card(Design({areaConsruir}))}
+          {Card(Estrutural({areaConsruir}))}
+          {Card(Hidrossanitario({areaConsruir}))}
+          {Card(InstalacaoEletrica({areaConsruir}))}
       </section>
+    </>
     )
   );
 };

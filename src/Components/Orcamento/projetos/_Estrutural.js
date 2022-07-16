@@ -1,6 +1,6 @@
-import {projeto} from './_Projeto';
+import {projeto} from '../class/_Projeto';
 
-export default function Estrutural({areaConsruir, areaTerreno}) {
+export default function Estrutural({areaConsruir}) {
   const itensInclude = [
     'Planta de locação',
     'Planta de forma',
@@ -17,7 +17,7 @@ export default function Estrutural({areaConsruir, areaTerreno}) {
     'Calculo de estrutural feito para concreto armado',
   ];
 
-  const arquitetonico = new projeto('Estrutural', areaConsruir, areaTerreno);
+  const arquitetonico = new projeto('Estrutural', areaConsruir);
   arquitetonico.itensIncludeInsert(itensInclude);
   arquitetonico.itensExcludedInsert(itensExcluded);
   arquitetonico.valoresInsert(16, 10);

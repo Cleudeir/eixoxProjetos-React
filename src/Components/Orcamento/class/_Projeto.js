@@ -1,8 +1,7 @@
 export class projeto {
-  constructor(tipo, areaConsruir, areaTerreno) {
+  constructor(tipo, areaConsruir) {
     this.tipo = tipo;
     this.areaConsruir = areaConsruir;
-    this.areaTerreno = areaTerreno;
     this.valores = {vista: 0, prazo: 0, parcela: 0};
     this.itensInclude = {};
     this.itensExcluded = {};

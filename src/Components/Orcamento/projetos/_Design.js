@@ -1,6 +1,6 @@
-import {projeto} from './_Projeto';
+import {projeto} from '../class/_Projeto';
 
-export default function Design({areaConsruir, areaTerreno}) {
+export default function Design({areaConsruir}) {
   const itensInclude = [
     'Design de 01 ambiente',
     'Lista de materiais de acabamento',
@@ -18,7 +18,7 @@ export default function Design({areaConsruir, areaTerreno}) {
     'Caso seja maior, considerar 2 ou mais ambientes',
   ];
 
-  const arquitetonico = new projeto('Design', areaConsruir, areaTerreno);
+  const arquitetonico = new projeto('Design', areaConsruir);
   arquitetonico.itensIncludeInsert(itensInclude);
   arquitetonico.itensExcludedInsert(itensExcluded);
   arquitetonico.valoresFixInsert(899, 10);
