@@ -7,7 +7,7 @@ const Capa = ({scrolling}) =>{
   const opacidade = ()=>{
     setOpacity(1);
   };
-  setTimeout(opacidade, 5000);
+  setTimeout(opacidade, 2000);
   return (
     <div className='Capa'>
 
