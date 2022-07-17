@@ -35,7 +35,6 @@ export class projeto {
     if (factor<0.6) {
       factor = 0.6;
     }
-    console.log(factor);
     const vista = area * value * factor;
     const prazoTotal = vista * (1 + acrescimo / 100);
     let parcela = Math.floor(prazoTotal / 250);

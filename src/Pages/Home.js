@@ -37,7 +37,6 @@ function Home() {
       <>
         <Capa scrolling={scrolling}/>
         <Portifolio/>
-        <DadosUser PassarAreas={PassarAreas}/>
         <ComoFunciona e comoDeseja={comoDeseja}/>
         {areas && <Orcameto areaConsruir={areas.areaConsruir} areaTerreno={areas.areaTerreno}/>}
       </>
