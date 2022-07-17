@@ -14,7 +14,7 @@ export default function Estrutural({areaConsruir}) {
     'Acompanhamento da execução',
   ];
   const observacao = [
-    'Calculo de estrutural feito para concreto armado',
+    'Calculo de estrutura feito para concreto armado',
   ];
 
   const arquitetonico = new projeto('Estrutural', areaConsruir);

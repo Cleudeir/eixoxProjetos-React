@@ -7,7 +7,7 @@ export class Modelo {
 
     insert(nome, tamanho, quantidade, area) {
       this[nome] = {quantidade, tamanho, area}
-      this.descricao.push(`0${quantidade} - ${tamanho} - ${[nome]}`)
+      this.descricao.push(`0${quantidade} ${[nome]}`)
     }
 
     areaConstruirCalc(obj) {

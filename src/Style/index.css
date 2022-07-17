@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
   padding: 0px;
-  margin: 0px;
-  
+  margin: 0px;  
 }
 :root {
   --cor1: rgba(3, 116, 26, 0.727);
-  --cor2: rgba(70, 70, 70, 1)
+  --cor2: rgba(70, 70, 70, 1);
+  --cor3: rgba(150, 150, 150, 0.671); 
 }
 body {
   width: 100%;
@@ -21,7 +21,7 @@ a{
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width:10px;
 }
 
 /* Track */

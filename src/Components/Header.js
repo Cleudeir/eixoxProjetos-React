@@ -28,9 +28,11 @@ const Header = () => {
       <div className='Header--menu'>
         <Link className='LINK' to="/">Inicio</Link>
         <Link className='LINK' to="/projetos">Projetos</Link>
+        <Link className='LINK' to="/orcamentos">Orçamentos</Link>
       </div>
 
-      <div className='Header--contact'>
+      <div className='Header--contact--container'>
+        <div className='Header--contact'>
         <a href='https://api.whatsapp.com/send?phone=553193281399'>
           <img src='icons/whatsApp.png' alt={''}/>
         </a>
@@ -40,6 +42,7 @@ const Header = () => {
         <a href='https://www.instagram.com/eixo_x_projetos'>
           <img src='icons/instagram.png' alt={''}/>
         </a>
+        </div>
       </div>
     </div>
   );

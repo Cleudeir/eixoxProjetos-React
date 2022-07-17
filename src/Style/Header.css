@@ -35,7 +35,7 @@
     margin: 0px 5px;
     display: inline-flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 .Header--menu .LINK{
     background-color: #14141400;
@@ -48,13 +48,28 @@
     cursor: pointer;
     font-size:20px;
 }
-.Header--contact{
-    height: 25px;
+.Header--contact--container{
+    position: fixed;
+    bottom:100px;
+    left: 0px;
+    height: 30px;
+    margin: 0px;
+    height: 35px;
     margin: 0px 5px;
-    cursor: pointer
+    cursor: pointer;   
+}
+.Header--contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
 }
 .Header--contact a {
-    margin: 0px 5px;    
+    margin: 5px 5px;    
+    height: 35px;
+    background: rgba(33, 56, 134, 0.486);
+    border-radius: 100%;
 }
 .Header--contact img{
     width: auto;

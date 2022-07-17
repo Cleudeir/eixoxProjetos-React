@@ -7,7 +7,7 @@ import Design from './projetos/_Design';
 import Estrutural from './projetos/_Estrutural';
 import Hidrossanitario from './projetos/_InstalacaoEletrica';
 import InstalacaoEletrica from './projetos/_InstalacaoEletrica';
-import MiniCard from './MiniCard.js';
+import MiniCard from './MiniCard';
 import {Modelo} from './class/_Modelo';
 const Orcameto = () =>{
   const [areaConsruir, setAreaConsruir] = useState(false);
@@ -33,17 +33,17 @@ useEffect(()=>{
   const modelo01 = new Modelo('kitnet')
   modelo01.insert('Quarto', 'Pequeno', 2, 9)
   modelo01.insert('Sala', 'Pequeno', 1, 5)
-  modelo01.insert('Banheiro Social', 'Pequeno', 1, 2.4)
+  modelo01.insert('Banheiro', 'Pequeno', 1, 2.4)
   modelo01.insert('Cozinha', 'Pequena', 1, 5)
   modelo01.areaConstruirCalc(modelo01)
   modelos.push(modelo01)
   console.log(modelo01)
 
-  const modelo02 = new Modelo('Apartamento - Pequeno')
+  const modelo02 = new Modelo('Apartamento')
   modelo02.insert('Quarto', 'Pequeno', 2, 9)
   modelo02.insert('Suite', 'Pequeno', 1, 12)
   modelo02.insert('Sala', 'Pequeno', 1, 5)
-  modelo02.insert('Banheiro Social', 'Pequeno', 1, 2.4)
+  modelo02.insert('Banheiro', 'Pequeno', 1, 2.4)
   modelo02.insert('Cozinha', 'Pequena', 1, 5)
   modelo02.areaConstruirCalc(modelo02)
   modelos.push(modelo02)
@@ -53,10 +53,10 @@ useEffect(()=>{
 }, [])
   return (
     (
-    <>
+    <div className='Preco--Container'>
       {useModelos && (
          <div className='Preco'>
-          {useModelos.map((modeloType)=>(MiniCard({modeloType, setOpacity, setAreaConsruir})))}
+          {useModelos.map((modeloType, key )=>(MiniCard({modeloType, setOpacity, setAreaConsruir, key})))}
       </div> )
       }
       {areaConsruir && <section className='Preco' style={{opacity: useOpacity, transition: 'ease-in-out 0.7s'}}>
@@ -66,7 +66,7 @@ useEffect(()=>{
           {Card(Hidrossanitario({areaConsruir}))}
           {Card(InstalacaoEletrica({areaConsruir}))}
       </section>}
-    </>
+    </div>
     )
   );
 };

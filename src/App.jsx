@@ -7,6 +7,7 @@ import {
 
 import Home from './Pages/Home';
 import Projetos from './Pages/Projetos';
+import Orcamentos from './Pages/Orcamentos';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/projetos" component={Projetos}/>
+        <Route path="/orcamentos" component={Orcamentos}/>
         <Route component={()=>{
           <div>Erro 404</div>;
         }}/>

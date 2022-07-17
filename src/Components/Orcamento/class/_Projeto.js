@@ -8,26 +8,10 @@ export class projeto {
     this.observacao = {};
   }
   itensIncludeInsert(value) {
-    const icon = {base: './icons/', iconName: 'v', extension: '.png'};
-    this.itensInclude = (
-      <>{value.map((item, i)=>{
-        return (
-          <li key={icon.iconName+i}>
-            <img src={icon.base+icon.iconName+icon.extension} alt={i+'c'}/> {item}
-          </li>);
-      })}</>
-    );
+    this.itensInclude = value
   }
   itensExcludedInsert(value) {
-    const icon = {base: './icons/', iconName: 'x', extension: '.png'};
-    this.itensExcluded = (
-      <>{value.map((item, i)=>{
-        return (
-          <li key={icon.iconName+i}>
-            <img src={icon.base+icon.iconName+icon.extension} alt={i+'b'}/> {item}
-          </li>);
-      })}</>
-    );
+    this.itensExcluded = value
   }
   valoresInsert(value, acrescimo) {
     const area = this.areaConsruir;
@@ -66,13 +50,6 @@ export class projeto {
     };
   }
   observacaoInsert(value) {
-    this.observacao = (
-      <>{value.map((item, i)=>{
-        return (
-          <li key={i+'a'} >
-            {item}
-          </li>);
-      })}</>
-    );
+    this.observacao = value
   }
 }
