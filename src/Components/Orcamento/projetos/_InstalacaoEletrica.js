@@ -1,6 +1,6 @@
 import {projeto} from '../class/_Projeto';
 
-export default function InstalacaoEletrica({areaConsruir}) {
+export default function InstalacaoEletrica() {
   const itensInclude = [
     'Calculo e dimensionamento das fiações',
     'Distribuição dos pontos de iluminação',
@@ -16,10 +16,9 @@ export default function InstalacaoEletrica({areaConsruir}) {
     '',
   ];
 
-  const arquitetonico = new projeto('Hidrossanitário', areaConsruir);
+  const arquitetonico = new projeto('Hidrossanitário');
   arquitetonico.itensIncludeInsert(itensInclude);
   arquitetonico.itensExcludedInsert(itensExcluded);
-  arquitetonico.valoresInsert(16, 10);
   arquitetonico.observacaoInsert(observacao);
   return arquitetonico;
 }

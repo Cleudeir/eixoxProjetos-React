@@ -1,6 +1,6 @@
 import {projeto} from '../class/_Projeto';
 
-export default function Hidrossanitario({areaConsruir}) {
+export default function Hidrossanitario() {
   const itensInclude = [
     'Distribuição dos pontos de agua fria',
     'Distribuição dos pontos de esgoto',
@@ -14,10 +14,9 @@ export default function Hidrossanitario({areaConsruir}) {
     '',
   ];
 
-  const arquitetonico = new projeto('Hidrossanitário', areaConsruir);
+  const arquitetonico = new projeto('Hidrossanitário');
   arquitetonico.itensIncludeInsert(itensInclude);
   arquitetonico.itensExcludedInsert(itensExcluded);
-  arquitetonico.valoresInsert(16, 10);
   arquitetonico.observacaoInsert(observacao);
   return arquitetonico;
 }

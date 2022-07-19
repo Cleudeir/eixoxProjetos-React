@@ -1,5 +1,5 @@
 .Protifolio{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 1px;
+    margin: 0px;
 }
 .Protifolio .card
 {
@@ -21,13 +21,14 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;    
+    width: 100%;
+    margin: 5px 0px;
 }
 .Protifolio .card
 { 
-    width: 100vw;
+    width: 98vw;
 }
-.Protifolio iframe,.Protifolio img
+.Protifolio iframe,.Protifolio img,.Protifolio .iframe360
 {    
     width: 100%;
     object-fit: cover;

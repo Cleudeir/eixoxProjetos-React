@@ -10,7 +10,7 @@ const Header = () => {
   const [colorHeader, setColorHeader] = useState(cor);
   const scrollListener = ()=>{
     if (window.scrollY>10) {
-      setColorHeader('rgba(0,0,0,.8)');
+      setColorHeader('rgba(0,0,0,.95)');
     } else {
       setColorHeader(cor);
     }
@@ -26,21 +26,21 @@ const Header = () => {
       </a>
 
       <div className='Header--menu'>
-        <Link className='LINK' to="/">Inicio</Link>
-        <Link className='LINK' to="/projetos">Projetos</Link>
-        <Link className='LINK' to="/orcamentos">Orçamentos</Link>
+        <Link className='LINK' to="/" onClick={()=>{
+          window.scrollTo(0, 0)
+          }}>Inicio</Link>
       </div>
 
       <div className='Header--contact--container'>
         <div className='Header--contact'>
         <a href='https://api.whatsapp.com/send?phone=553193281399'>
-          <img src='icons/whatsApp.png' alt={''}/>
+          <img src='icons/whatsApp.png' alt={'whatsApp'}/>
         </a>
         <a href='https://www.facebook.com/eixoxprojetos'>
-          <img src='icons/facebook.png' alt={''}/>
+          <img src='icons/facebook.png' alt={'facebook'}/>
         </a>
         <a href='https://www.instagram.com/eixo_x_projetos'>
-          <img src='icons/instagram.png' alt={''}/>
+          <img src='icons/instagram.png' alt={'instagram'}/>
         </a>
         </div>
       </div>

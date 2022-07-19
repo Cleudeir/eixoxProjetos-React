@@ -15,6 +15,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgba(245, 245, 245, 1);
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;  
+}
+
 a{
   color:initial;
   text-decoration: none;
@@ -46,5 +56,4 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] { 
  -moz-appearance: textfield;
  appearance: textfield;
-
 }

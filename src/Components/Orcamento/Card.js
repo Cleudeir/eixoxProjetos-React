@@ -1,14 +1,9 @@
 export default function Card(props) {
-  const {tipo, valores, areaConsruir, areaTerreno,
-    itensExcluded, itensInclude, observacao} = props;
+  const {tipo, itensExcluded, itensInclude, observacao} = props;
   return (
-    <div className='card'>
+
+    <div className='card--orcamento'>
       <h1>{tipo}</h1>
-      <div className='card--subTitle'>
-      <h2>{valores.parcela}x de {valores.prazo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no Cartão</h2>
-      <h2>ou</h2>
-      <h2>{valores.vista.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} à vista</h2>
-      </div>
       <ol>
       {itensInclude.map((item, i)=>{
          const icon = './icons/v.png'

@@ -10,7 +10,6 @@ const Capa = ({scrolling}) =>{
   setTimeout(opacidade, 2000);
   return (
     <div className='Capa'>
-
       <video autoPlay muted playsInline poster="./video/roca_1080p.jpg">
         <source src="./video/roca_1080p.mp4" type="video/mp4"/>
       </video>
@@ -18,7 +17,6 @@ const Capa = ({scrolling}) =>{
         <h3>VEJA MAIS</h3>
         <KeyboardArrowDownOutlinedIcon className='Capa--seta--down' ></KeyboardArrowDownOutlinedIcon>
       </div>
-
     </div>
   );
 };
