@@ -8,6 +8,9 @@
   --cor2: rgba(70, 70, 70, 1);
   --cor3: rgba(150, 150, 150, 0.671); 
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -15,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgba(245, 245, 245, 1);
 }
+
 
 .App {
   display: flex;

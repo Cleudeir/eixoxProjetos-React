@@ -1,7 +1,6 @@
 export default function Card(props) {
   const {tipo, itensExcluded, itensInclude, observacao} = props;
   return (
-
     <div className='card--orcamento'>
       <h1>{tipo}</h1>
       <ol>

@@ -1,106 +1,116 @@
-.Protifolio{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+.Protifolio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.Protifolio .card--conteriner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 0px;
+.Protifolio .card--conteriner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0px;
+  width: inherit;
 }
-.Protifolio .card
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 5px 0px;
-}
-.Protifolio .card
-{ 
-    width: 98vw;
-}
-.Protifolio iframe,.Protifolio img,.Protifolio .iframe360
-{    
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0px;
-    height:90vw;
+.Protifolio .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1px 0px;
+  height: inherit;
 }
 
-.Protifolio .card--seta--left, .Protifolio .card--seta--right{
-    margin-top: calc(-84% + 30px);
-    width:60px;
-    height:60px;
-    background-color: rgba(255, 255, 255, 0.624);
-    filter:invert(1);
-    border-radius: 100%;
-    z-index: 99;
-    padding: 10px;   
-    border: 2px solid black;
-    opacity: 1;
-    transition: 0.2s;
-    transform: scale(.9);
-    cursor: pointer;
+.Protifolio img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
+  height: 90vw;
 }
-.Protifolio .card--seta--left{
-    margin-right:calc(93% - 40px) ;
+.Protifolio iframe {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
+  height: 55.45vw;
 }
-.Protifolio .card--seta--right{    
-    margin-left:calc(93% - 40px);
-}
-
-.Protifolio .arrow-left, .Protifolio .arrow-right{
-    font-size: 60px;
-}
-.Protifolio .arrow-left{
-    margin-left: 7px;
+.Protifolio .iframe360 {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
+  height: 90vw;
+  z-index: -1;
 }
 
-.Protifolio .card--seta--left:hover, .Protifolio .card--seta--right:hover{    
-    transition: 0.2s;
-    transform: scale(1);
+.Protifolio .card--seta--left,
+.Protifolio .card--seta--right {
+  margin-top: -30vh;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.624);
+  filter: invert(1);
+  border-radius: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  opacity: 1;
+  transition: 0.2s;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.Protifolio .card--seta--left {
+  margin-right: 5px;
+}
+.Protifolio .card--seta--right {
+  margin-left: 5px;
 }
 
-.Protifolio h2{
-    text-transform: uppercase;
-    background-color: var(--cor2);
-    width: 100%;
-    margin: 2px;
-    margin-bottom: -32px;
-    z-index: 999;
-    text-align: center;
-    border-radius: 1px;
-    color: white;   
+.Protifolio .arrow-left,
+.Protifolio .arrow-right {
+  font-size: 60px;
+}
+.Protifolio .arrow-left {
+  margin-left: 7px;
+}
+
+.Protifolio .card--seta--left:hover,
+.Protifolio .card--seta--right:hover {
+  transition: 0.2s;
+  transform: scale(1);
+}
+
+.Protifolio h2 {
+  text-transform: uppercase;
+  background-color: var(--cor2);
+  width: 100%;
+  margin: 2px;
+  margin-bottom: -32px;
+  text-align: center;
+  border-radius: 1px;
+  color: white;
 }
 @media (max-width: 700px) {
-    .Protifolio .card--seta--left, .Protifolio .card--seta--right{
-        margin-top: calc(-84% - 15px);
-        width:30px;
-        height:30px;
-    }
-    .Protifolio .arrow-left, .Protifolio .arrow-right{
-        font-size: 30px;
-    }
-    .Protifolio .arrow-left{
-        margin-left: 7px;
-    }
-    .Protifolio iframe,.Protifolio img, .Protifolio .iframe360{
-        height: 100vw;
-    }
-    .Protifolio .card--seta--left{
-        margin-right:84%;
-    }
-    .Protifolio .card--seta--right{    
-        margin-left:84%;
-    }
+  .Protifolio .card--seta--left,
+  .Protifolio .card--seta--right {
+    margin-top: -20vw;
+    width: 30px;
+    height: 30px;
+  }
+  .Protifolio .arrow-left,
+  .Protifolio .arrow-right {
+    font-size: 30px;
+  }
+  .Protifolio .arrow-left {
+    margin-left: 7px;
+  }
+  .Protifolio img,
+  .Protifolio .iframe360 {
+    height: 100vw;
+  }
 }

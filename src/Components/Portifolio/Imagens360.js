@@ -37,12 +37,13 @@ export default function Imagens360() {
 
     return (
     <div className='Protifolio'>
+
       <div className='card--conteriner'>
         <div className='card'>
           {useData &&
           (<iframe title='360' className='iframe360' frameBorder="0" scrolling='no'
           sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads"
-          src={`https://momento360.com/e/u/${useData[useId]}?wheel=false&display-mode=clean&pan-speed=0.01&utm_campaign=embed&utm_source=other&heading=150&pitch=-0&field-of-view=90.5&size=medium`}
+          src={`https://momento360.com/e/u/${useData[useId]}?wheel=false&display-mode=clean&pan-speed=0.15&utm_campaign=embed&utm_source=other&heading=150&pitch=-0&field-of-view=90.5&size=medium`}
           allowFullScreen>
           </iframe>)
           }
@@ -51,6 +52,7 @@ export default function Imagens360() {
           <div className='card--seta--right' onClick={handleRightArrow} >
             <ArrowForwardIosIcon className='arrow-right'/></div>
         </div>
+
       </div>
     </div>
     )

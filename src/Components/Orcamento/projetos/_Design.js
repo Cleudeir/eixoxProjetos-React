@@ -6,11 +6,11 @@ export default function Design() {
     'Lista de materiais de acabamento',
     'Planta baixa e executiva do ambiente',
     '02 Imagens 3D realistas',
+    'Móveis (detalhamento de planejados)',
     'Suporte na leitura do projeto',
     '02 pedidos de revisão',
   ];
   const itensExcluded = [
-    'Móveis (detalhamento de planejados)',
     'Acompanhamento da execução',
   ];
   const observacao = [

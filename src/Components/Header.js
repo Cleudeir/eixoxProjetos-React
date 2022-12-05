@@ -6,11 +6,11 @@ import {
 } from 'react-router-dom';
 
 const Header = () => {
-  const cor = 'rgba(0,0,0,.7)';
+  const cor = 'rgba(152,150,154,.5)';
   const [colorHeader, setColorHeader] = useState(cor);
   const scrollListener = ()=>{
     if (window.scrollY>10) {
-      setColorHeader('rgba(0,0,0,.95)');
+      setColorHeader('rgba(152,150,154,.9)');
     } else {
       setColorHeader(cor);
     }

@@ -1,12 +1,11 @@
 .Footer{
     height: 100%;
     width: 100%;
-    padding: 20px 0px;
+    padding: 20px 20px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: rgba(128, 128, 128, 0.193);
 }

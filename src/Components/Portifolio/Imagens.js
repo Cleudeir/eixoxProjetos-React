@@ -36,6 +36,7 @@ export default function Imagens() {
 
     return (
     <div className='Protifolio'>
+
             <div className='card--conteriner'>
                 <div className='card'>
                 {useData && <img src={useData[useId]} alt={useData[useId]}/>}
@@ -47,6 +48,7 @@ export default function Imagens() {
                 </div>
                 </div>
             </div>
+
       </div>
     )
 }

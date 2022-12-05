@@ -11,14 +11,14 @@ export default function Videos() {
 
     useEffect(() => {
       const link = [
-        'https://www.youtube.com/embed/NCbn4ATvtDQ',
-        'https://www.youtube.com/embed/M7KC0RBF3ik',
-        'https://www.youtube.com/embed/abG8Rpt9_Dk',
-        'https://www.youtube.com/embed/VGk1RnIhoT8',
-        'https://www.youtube.com/embed/larM8-yZYbw',
-        'https://www.youtube.com/embed/7LSylHorKAk',
-        'https://www.youtube.com/embed/f298ZTZgHiA',
-        'https://www.youtube.com/embed/7_peP3YcVcI',
+        'NCbn4ATvtDQ',
+        'M7KC0RBF3ik',
+        'abG8Rpt9_Dk',
+        'VGk1RnIhoT8',
+        'larM8-yZYbw',
+        '7LSylHorKAk',
+        'f298ZTZgHiA',
+        '7_peP3YcVcI',
       ]
       setData(link);
       }, []);
@@ -41,11 +41,14 @@ export default function Videos() {
 
     return (
     <div className='Protifolio'>
+
       <div className='card--conteriner'>
         <div className='card'>
           {useData &&
-          <iframe src={useData[useId]+'?autoplay=0&controls=0&rel=0&mute=0&showinfo=1&modestbranding=0'}
-          key={useData[useId]} title="YouTube video player" frameBorder="0" allowFullScreen
+          <iframe src={'https://www.youtube.com/embed/'+ useData[useId]+'?autoplay=0&controls=0&rel=0&mute=0&showinfo=1&modestbranding=0'}
+          key={'https://www.youtube.com/embed/'+ useData[useId]}
+          title="YouTube video player"
+          frameBorder="0" allowFullScreen
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>
           }
           <div className='card--seta--left' onClick={handleLeftArrow} >
@@ -54,6 +57,7 @@ export default function Videos() {
             <ArrowForwardIosIcon className='arrow-right'/>
           </div>
         </div>
+
       </div>
     </div>
     )
