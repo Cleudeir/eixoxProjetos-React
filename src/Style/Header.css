@@ -2,7 +2,7 @@
     position: fixed;
     top:0px;
     left: 0px;
-    height: 50px;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 .Header--logo{
     height: 40px;
-    margin: 5px;
+    margin: 2px;
     cursor: pointer;
     display:inline-flex;
     justify-content: center;
@@ -27,7 +27,7 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
     margin-left: 5px;
-    width: 50px;
+    width: 60px;
 }
 .Header--menu{
     height: 50px;
@@ -37,7 +37,6 @@
     align-items: center;
 }
 .Header--menu .LINK{
-    background-color: #14141400;
     margin: 0px 5px;
     padding: 0px 0px;
     border: none;
@@ -48,26 +47,20 @@
     font-size:20px;
 }
 .Header--contact--container{
-    position: fixed;
-    bottom:100px;
-    left: 0px;
-    height: 30px;
     margin: 0px;
     height: 35px;
-    margin: 0px 5px;
-    cursor: pointer;   
+    cursor: pointer;
 }
 .Header--contact{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     cursor: pointer;
 }
 .Header--contact a {
-    margin: 5px 5px;    
-    height: 35px;
-    background: rgba(33, 56, 134, 0.486);
+    margin: 0px 5px;    
+    height: 40px;
     border-radius: 100%;
 }
 .Header--contact img{
@@ -76,7 +69,7 @@
 }
 @media (max-width: 500px){ 
     .Header--logo h4{
-        opacity: 0;
+        opacity: 1;
         margin-right: -40px;
     }
     .Header--menu .LINK{

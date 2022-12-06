@@ -16,7 +16,7 @@ export default function InstalacaoEletrica() {
     '',
   ];
 
-  const arquitetonico = new projeto('Hidrossanitário');
+  const arquitetonico = new projeto('Instalação Elétrica');
   arquitetonico.itensIncludeInsert(itensInclude);
   arquitetonico.itensExcludedInsert(itensExcluded);
   arquitetonico.observacaoInsert(observacao);

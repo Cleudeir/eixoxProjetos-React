@@ -21,16 +21,8 @@ const Header = () => {
     <div className='Header'
       style={{backgroundColor: colorHeader, transition: '0.5s'}}>
       <a href='./' className='Header--logo'>
-        <img src={'icons/logo.png'} alt={''}/>
-        <h4>Eixo X Projetos</h4>
+        <h4 style={{whiteSpace: 'nowrap'}} >EIXO X PROJETOS</h4>
       </a>
-
-      <div className='Header--menu'>
-        <Link className='LINK' to="/" onClick={()=>{
-          window.scrollTo(0, 0)
-          }}>Inicio</Link>
-      </div>
-
       <div className='Header--contact--container'>
         <div className='Header--contact'>
         <a href='https://api.whatsapp.com/send?phone=553193281399'>
